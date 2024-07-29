@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
+// RFC
 function App() {
+  // states/variable
+
+  // hook variable
+  const [studentName, setStudentName] = useState('subh')
+
+  // function
+
+  // let create a function using fat arraow
+
+  let studenFun = () => {
+    console.log(studentName);
+  }
+
+  // return
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form>
+        <label>Enter your Student Name:
+          <input type="text" value={ studentName } onChange={ (e)=> { setStudentName(e.target.value) } } />
+        </label>
+        <input type="button" onClick={studenFun} name="studentName" value="Save" />
+    </form>
     </div>
   );
 }
