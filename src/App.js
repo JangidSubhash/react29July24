@@ -6,7 +6,7 @@ function App() {
   // states/variable
 
   // hook variable
-  const [studentName, setStudentName] = useState('subh')
+  const [studentName, setStudentName] = useState('')
 
   // function
 
